@@ -87,3 +87,8 @@
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
 }
+
+#filter {
+  display: inline-flex;
+  gap: 5px
+}
