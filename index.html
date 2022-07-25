@@ -7,19 +7,11 @@
 <title>This is WCAG</title>
 
 <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/headers/">   
-
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-
 <link href="site.css" rel="stylesheet">
 </head>
 
 <body>
-
-  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-    <symbol id="thisiswcag" viewBox="0 0 16 16">
-      <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
-    </symbol>
-  </svg>
 
   <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
     <div class="offcanvas-header">
@@ -164,7 +156,7 @@
     <div class="container d-flex justify-content-start">
       <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filter" viewBox="0 0 16 16">
-          <path d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+          <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
         </svg>
       </button>
 
@@ -179,9 +171,11 @@
   
   <div class="container">
     <div class="row align-middle">
-      <h2 class="pb-4">
-        <small class="text-muted">showing <strong>20</strong> results filtered by <span class="badge text-bg-success">forms</span></small>
-      </h2>
+      <div class="col">
+        <h2 class="pb-4">
+          <small class="text-muted">showing <strong>20</strong> results filtered by <span class="badge text-bg-success">forms</span></small>
+        </h2>
+      </div>
     </div>
 
     <div class="table-responsive">
