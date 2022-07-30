@@ -67,12 +67,14 @@ uniqeCategories.forEach(category => {
 function showFiltersOnUI() {
     // Joined filters value by comma or show dash
     selectedTags = [
-        selectedLevels,
-        selectedVersions,
-        selectedCategory
+        selectedLevels.map(x => {
+            if(x === 'AA') return `<span class="badge text-bg-danger">${x}</span>`
+            else return `<span class="badge text-bg-success">${x}</span>`
+        }),
+        selectedVersions.map(x => `<span class="badge text-bg-secondary">${x}</span>`),
+        selectedCategory.map(x => `<span class="badge text-bg-light">${x}</span>`)
     ]
     .flat()
-    .map(x => `<span class="badge text-bg-success">${x}</span>`)
     .join('')
 
     resultCountAndTag.innerHTML = `showing <strong>${totalResults}</strong> results filtered by ${selectedTags || '<span class="badge text-bg-success">All</span>'}`;
