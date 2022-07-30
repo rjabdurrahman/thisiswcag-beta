@@ -1,5 +1,7 @@
 const tableBody = document.querySelector('tbody');
-const filteredBy = document.getElementById('filter');
+let totalResults = 0;
+let selectedTags = '';
+let resultCountAndTag = document.getElementById('resCountTag');
 // const wcagVersion = document.getElementById('wcagVersion');
 let selectedLevels = [], selectedVersions = [], selectedCategory = [];
 let uniqeLevels = [
@@ -63,16 +65,23 @@ uniqeCategories.forEach(category => {
 
 // Show filtered by
 function showFiltersOnUI() {
-    let filterEl = document.getElementById('filter');
     // Joined filters value by comma or show dash
-    filterEl.innerHTML = [selectedLevels, selectedVersions, selectedCategory].flat().map(x => `<span class="badge text-bg-success">${x}</span>`).join('') || '<span class="badge text-bg-success">All</span>'
+    selectedTags = [
+        selectedLevels,
+        selectedVersions,
+        selectedCategory
+    ]
+    .flat()
+    .map(x => `<span class="badge text-bg-success">${x}</span>`)
+    .join('')
+
+    resultCountAndTag.innerHTML = `showing <strong>${totalResults}</strong> results filtered by ${selectedTags || '<span class="badge text-bg-success">All</span>'}`;
 }
 
 // Create table row for each data
 function populateTable(obj) {
     showFiltersOnUI();
     tableBody.innerHTML = '';
-    const resultsElement = document.getElementById('returnedResults');
     const tests = obj['tests'];
     var returnedResults = 0;
 
@@ -158,7 +167,8 @@ function populateTable(obj) {
         }
 
     }
-    resultsElement.textContent = returnedResults;
+    totalResults = returnedResults;
+    resultCountAndTag.innerHTML = `showing <strong>${totalResults}</strong> results filtered by ${selectedTags || '<span class="badge text-bg-success">All</span>'}`;
 }
 
 // Getting selected levels

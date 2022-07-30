@@ -88,7 +88,10 @@
   -webkit-overflow-scrolling: touch;
 }
 
-#filter {
-  display: inline-flex;
-  gap: 5px
+#resCountTag span{
+  margin-right: 5px;
+}
+
+#resCountTag span:last-of-type {
+  margin-right: 0;
 }
