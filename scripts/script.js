@@ -30,8 +30,8 @@ uniqeLevels.forEach(level => {
     document.getElementById('levels').innerHTML += `
 	<li class="nav-item ms-3">
             <div class="form-check">
-              <input name="${level}" class="form-check-input level-selector" type="checkbox" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">${level}</label>
+              <input name="${level}" class="form-check-input level-selector" type="checkbox" id="level-${level}">
+              <label for="level-${level}" class="form-check-label" for="flexCheckDefault">${level}</label>
             </div>
     </li>
 	`
@@ -42,8 +42,8 @@ uniqeLVersions.forEach(version => {
     document.getElementById('versions').innerHTML += `
 	<li class="nav-item ms-3">
             <div class="form-check">
-              <input name="${version}" class="form-check-input version-selector" type="checkbox" value="" id="flexCheckDefault3">
-              <label class="form-check-label" for="flexCheckDefault3">${version}</label>
+              <input name="${version}" class="form-check-input version-selector" type="checkbox" id="version-${version}">
+              <label for="version-${version}" class="form-check-label" for="flexCheckDefault3">${version}</label>
             </div>
     </li>
 	`
@@ -54,8 +54,8 @@ uniqeCategories.forEach(category => {
     document.getElementById('categories').innerHTML += `
     <li class="nav-item ms-3">
         <div class="form-check">
-            <input name="${category}" class="form-check-input category-selector" type="checkbox" value="" id="flexCheckDefault5">
-            <label class="form-check-label" for="flexCheckDefault5">${category}</label>
+            <input name="${category}" class="form-check-input category-selector" type="checkbox" id="cat-${category}">
+            <label for="cat-${category}" class="form-check-label" for="flexCheckDefault5">${category}</label>
         </div>
     </li>
 	`
