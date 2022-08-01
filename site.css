@@ -95,3 +95,9 @@
 #resCountTag span:last-of-type {
   margin-right: 0;
 }
+
+.btn-link
+{
+  --bs-btn-color:white;
+  --bs-btn-hover-color:white;
+}
